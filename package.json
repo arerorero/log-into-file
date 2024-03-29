@@ -1,9 +1,9 @@
 {
   "name": "log-into-file",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "this package is used to log the data into a file",
   "type": "module",
-  "main": "log.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,9 +20,7 @@
   "author": "Filippo Grassano, @arerorero",
   "license": "ISC",
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "path": "^0.12.7",
-    "url": "^0.11.3"
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0"

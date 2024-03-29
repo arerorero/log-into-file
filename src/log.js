@@ -1,5 +1,7 @@
 import fs from "fs/promises";
+
 const root_path = process.cwd();
+
 export default async function logMessage(message, tag = null) {
   await checkFolder();
   await gitIgnore();
