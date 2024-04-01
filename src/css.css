@@ -1,0 +1,43 @@
+body{
+    color: white;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    border-top: 1px solid white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+}
+
+.tag {
+    color: yellow;
+}
+
+.error{
+    color: red;
+}
+
+.sucess{
+    color: green;
+}
+
+.default{
+    color: white;
+}
