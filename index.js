@@ -1,5 +1,5 @@
 import log from "./src/log.js";
-import page from "./src/page.js";
+import create_page from "./src/page.js";
 
 export default log;
-export { page };
+export { create_page };

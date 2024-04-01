@@ -11,7 +11,7 @@ export default async function logMessage(message, tag = null) {
   if (tag) {
     log += `[${tag.toUpperCase()}] `;
   }
-  log += `${message} - ${timestamp.slice(11, 20)} \n`;
+  log += `${message} - ${timestamp.slice(11, 20)}\n`;
 
   fs.appendFile(logFilePath, log, (err) => {
     if (err) {
