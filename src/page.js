@@ -16,12 +16,13 @@ async function printLogs() {
   <body>`;
   try {
     const logFiles = await fs.readdir(`${root_path}/log`);
-    for (const file of logFiles) {
+    for (let i = logFiles.length - 1; i >= 0; i--) {
+      const file = logFiles[i];
       const logFilePath = `${root_path}/log/${file}`;
       const log = await fs.readFile(logFilePath, "utf-8");
       let lines = log.split("\n");
       html += `<h1>${file.slice(0, 10)}</h1><ul>`;
-      lines.forEach((line) => {
+      lines.reverse().forEach((line) => {
         if (line) {
           const regex = /\[(.*?)\]/;
           let tag = line.match(regex);

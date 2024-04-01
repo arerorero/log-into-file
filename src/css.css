@@ -1,43 +1,60 @@
-body{
-    color: white;
-    background-color: black;
+/* General body styling */
+body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
     margin: 0;
-    padding: 0;
-}
-
-
-h1{
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-ul{
-    border-top: 1px solid white;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  h1 {
+    color: #333;
+    border-bottom: 2px solid #666;
+    padding-bottom: 10px;
+  }
+  
+  ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
-}
-
-li{
-    margin: 0;
-    padding: 0;
-}
-
-.tag {
-    color: yellow;
-}
-
-.error{
-    color: red;
-}
-
-.sucess{
-    color: green;
-}
-
-.default{
-    color: white;
-}
+  }
+  
+  li {
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Tag and log type styling */
+  .tag {
+    font-weight: bold;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  
+  .error {
+    background-color: #d9534f; /* Red for errors */
+  }
+  
+  .default {
+    background-color: #5bc0de; /* Light blue for default logs */
+  }
+  
+  .success { /* Note: There's a typo in your class name, should it be 'success'? */
+    background-color: #5cb85c; /* Green for success */
+  }
+  
+  .test {
+    background-color: #f0ad4e; /* Orange for test logs */
+  }
+  
+  /* Additional styling for improved readability */
+  li {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  span.tag {
+    margin-right: 10px;
+  }
+  
