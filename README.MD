@@ -52,7 +52,7 @@ create_page();
 
 // whatever you put into the tag will be added on the html as a class
 // this way you can personalize the way you view your logs!
-// for now i it just works with 'error', 'sucess', 'default'(this will be default if you do not put any tag) and 'tag'(this will be default if you put another tag)
+// for now i it just works with 'error', 'success', 'default'(this will be default if you do not put any tag) and 'tag'(this will be default if you put another tag)
 ```
 
 ## Author
