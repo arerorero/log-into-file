@@ -26,10 +26,8 @@ body {
   
   /* Tag and log type styling */
   .tag {
+    background-color: #aff;
     font-weight: bold;
-    color: #fff;
-    padding: 2px 5px;
-    border-radius: 4px;
   }
   
   .error {

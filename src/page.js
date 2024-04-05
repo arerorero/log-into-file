@@ -28,11 +28,11 @@ async function printLogs() {
           let tag = line.match(regex);
           if (tag) {
             line = line.replace(tag[0], "");
-            html += `<li class="${tag[1].toLowerCase()}">
+            html += `<li class="tag ${tag[1].toLowerCase()}">
                       <span class="tag ${tag[1].toLowerCase()}">${tag[0].toUpperCase()}</span>
                       ${line}</li>`;
           } else {
-            html += `<li class="default ">
+            html += `<li class="default">
             <span class="tag default">[DEFAULT]</span>
             ${line}
             </li>`;
