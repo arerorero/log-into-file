@@ -44,7 +44,7 @@ create_page();
 ### customize your tags
 
 ```js
-import log, { create_page } from "log-into-file";
+import { log, create_page } from "log-into-file";
 
 log("this is a test log", "tests");
 

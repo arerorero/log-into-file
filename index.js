@@ -2,4 +2,4 @@ import log from "./src/log.js";
 import create_page from "./src/page.js";
 
 export default log;
-export { create_page };
+export { log, create_page };
