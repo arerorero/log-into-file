@@ -2,9 +2,14 @@ import fs from "fs/promises";
 
 const root_path = process.cwd();
 
-export default async function logMessage(message, tag = null) {
+export default async function logMessage(
+  message,
+  tag = null,
+  command = "log-page"
+) {
   await checkFolder();
   await gitIgnore();
+  await pkgJson(command);
   const timestamp = getTime();
   const logFilePath = `${root_path}/log/${timestamp.slice(0, 10)}.log`;
   let log = "";
@@ -38,6 +43,34 @@ async function checkFolder() {
     await fs.access(logFolderPath);
   } catch (error) {
     fs.mkdir(logFolderPath);
+  }
+}
+
+async function pkgJson(command) {
+  const path = `${root_path}/package.json`;
+  try {
+    const content = await fs.readFile(path, "utf-8");
+    const packageJson = JSON.parse(content);
+    if (!content.includes("node node_modules/log-into-file/paginator.js")) {
+      if (!content.includes(command)) {
+        packageJson.scripts[command] =
+          "node node_modules/log-into-file/paginator.js";
+        await fs.writeFile(path, JSON.stringify(packageJson, null, 2));
+        console.log(`Command '${command}' added to package.json file`);
+      } else {
+        if (
+          packageJson.scripts.superduper !=
+          "node node_modules/log-into-file/paginator.js"
+        ) {
+          console.log(`Command name '${command}' already exists in package.json, 
+        run your log command again with this sintax:
+        log("your text here!", your_tag_here/undefined, "your command name here!");
+        `);
+        }
+      }
+    }
+  } catch (error) {
+    console.log("Error reading package.json file");
   }
 }
 
