@@ -30,32 +30,41 @@ log("this is a file with a tag (better)", "help");
 
 ## Log Viewer
 
+this is a visual application to see all the logs that are stored in the log folder, you can actualy manually add logs there if you have any and want to check how it works.
+
 ### how to run
 
-```js
-import { create_page } from "log-into-file";
+when running the the log command for the first time it will add in your package.json file a script
 
-create_page();
-
-// this will create a desktop application to show all your logs
-// for now its very very ugly, i'll redo it later this week
+```json
+"scripts": {
+    "log-page": "node node_modules/log-into-file/paginator.js"
+}
 ```
 
-### customize your tags
+the default will be 'log-page' and you can run it on your terminal
 
-```js
-import { log, create_page } from "log-into-file";
-
-log("this is a test log", "tests");
-
-create_page();
-
-// whatever you put into the tag will be added on the html as a class
-// this way you can personalize the way you view your logs!
-// for now i it just works with 'error', 'success', 'default'(this will be default if you do not put any tag) and 'tag'(this will be default if you put another tag)
+```bash
+$ npm run log-page
 ```
 
-## Author
+if you want to change the default just run
+
+```js
+log("your_text", "your_tag", "your_function_name");
+
+// you can set your tag to undefined too!
+```
+
+then you can run
+
+```bash
+$ npm run your-function-name
+```
+
+# Author
 
 Filippo Grassano
 @arerorero
+
+for any tips -> [Github](https://github.com/arerorero/log-into-file)

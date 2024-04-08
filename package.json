@@ -1,7 +1,7 @@
 {
   "name": "log-into-file",
-  "version": "1.1.4",
-  "description": "this package is used to log the data into a file",
+  "version": "1.2.1",
+  "description": "this package is used to log the data into a file and view the data in a desktop application",
   "type": "module",
   "main": "index.js",
   "scripts": {
